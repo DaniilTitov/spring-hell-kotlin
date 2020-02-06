@@ -11,10 +11,10 @@ import ru.spring.hell.client.PersonClient
 class PersonTask(private val personClient: PersonClient) {
     private val log: Logger = getLogger(PersonTask::class.java)
 
-    @Scheduled(fixedRate = 5000)
-    fun reportCurrentTime() {
-        val person = personClient.get("5e386aadc8f86706fe730403")
-        log.info("Person: {}", person)
-    }
+//    @Scheduled(fixedRate = 5000)
+//    fun reportCurrentTime() {
+//        val person = personClient.get("5e386aadc8f86706fe730403")
+//        log.info("Person: {}", person)
+//    }
 
 }

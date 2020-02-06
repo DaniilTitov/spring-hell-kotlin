@@ -12,20 +12,20 @@ import java.math.BigInteger.TEN
 class ItemTask(private val itemClient: ItemClient) {
     private val log: Logger = getLogger(ItemTask::class.java)
 
-    @Scheduled(fixedRate = 5000)
-    fun reportCurrentTime() {
-        val items = Items()
-
-        items.item.add(
-                Items.Item().apply {
-                    diameter = TEN
-                    name = "Vasya"
-                    size = "Small"
-                }
-        )
-
-        val person = itemClient.items(items)
-        log.info("Person: {}", person)
-    }
+//    @Scheduled(fixedRate = 5000)
+//    fun reportCurrentTime() {
+//        val items = Items()
+//
+//        items.item.add(
+//                Items.Item().apply {
+//                    diameter = TEN
+//                    name = "Vasya"
+//                    size = "Small"
+//                }
+//        )
+//
+//        val person = itemClient.items(items)
+//        log.info("Person: {}", person)
+//    }
 
 }
