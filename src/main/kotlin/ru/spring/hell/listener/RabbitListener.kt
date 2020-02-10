@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component
 
 @Component
 @EnableRabbit
-class Listener {
-    var logger: Logger = getLogger(Listener::class.java)
+class RabbitListener {
+    var logger: Logger = getLogger(this::class.java)
 
     @RabbitListener(queues = ["firstPersonQueue"])
     fun processPersonQueue(message: String) {

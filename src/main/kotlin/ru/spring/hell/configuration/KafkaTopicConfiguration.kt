@@ -12,7 +12,7 @@ import java.util.*
 @Configuration
 class KafkaTopicConfiguration {
     @Value(value = "\${spring.kafka.bootstrap-address}")
-    lateinit var bootstrapAddress: String
+    private lateinit var bootstrapAddress: String
 
     @Bean
     fun kafkaAdmin(): KafkaAdmin {
@@ -22,7 +22,7 @@ class KafkaTopicConfiguration {
     }
 
     @Bean
-    fun topic1(): NewTopic {
-        return NewTopic("spring-hell", 1, 1.toShort())
+    fun topic(): NewTopic {
+        return NewTopic("spring-hell-json", 1, 1)
     }
 }

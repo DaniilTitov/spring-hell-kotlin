@@ -13,5 +13,5 @@ class PersonFeignClientConfiguration {
     }
 
     @Bean
-    fun requestInterceptor(): RequestInterceptor? = RequestInterceptor { println("intercept") }
+    fun requestInterceptor(): RequestInterceptor = RequestInterceptor { println("intercept") }
 }
