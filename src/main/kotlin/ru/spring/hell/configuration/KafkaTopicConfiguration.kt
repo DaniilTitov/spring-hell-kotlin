@@ -1,6 +1,6 @@
 package ru.spring.hell.configuration
 
-import org.apache.kafka.clients.admin.AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG
+import org.apache.kafka.clients.admin.AdminClientConfig.*
 import org.apache.kafka.clients.admin.NewTopic
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
@@ -18,6 +18,9 @@ class KafkaTopicConfiguration {
     fun kafkaAdmin(): KafkaAdmin {
         val configs: MutableMap<String, Any> = HashMap()
         configs[BOOTSTRAP_SERVERS_CONFIG] = bootstrapAddress
+//        configs[CLIENT_DNS_LOOKUP_CONFIG] = "resolve_canonical_bootstrap_servers_only"
+        configs[CLIENT_ID_CONFIG] = "0"
+
         return KafkaAdmin(configs)
     }
 

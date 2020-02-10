@@ -16,7 +16,7 @@ class RabbitConfiguration {
 
     @Bean
     fun connectionFactory(): ConnectionFactory {
-        return CachingConnectionFactory("localhost")
+        return CachingConnectionFactory("127.0.0.1")
     }
 
     @Bean
