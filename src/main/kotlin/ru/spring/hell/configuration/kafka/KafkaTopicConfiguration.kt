@@ -1,4 +1,4 @@
-package ru.spring.hell.configuration
+package ru.spring.hell.configuration.kafka
 
 import org.apache.kafka.clients.admin.AdminClientConfig.*
 import org.apache.kafka.clients.admin.NewTopic
@@ -28,4 +28,14 @@ class KafkaTopicConfiguration {
     fun topic(): NewTopic {
         return NewTopic("spring-hell-json", 1, 1)
     }
+
+    @Bean
+    fun personTopic(): NewTopic {
+        return NewTopic("person-topic", 1, 1)
+    }
+//
+//    @Bean
+//    fun personTopicRep(): NewTopic {
+//        return NewTopic("person-topic-rep", 1, 1)
+//    }
 }

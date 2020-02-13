@@ -3,7 +3,7 @@ package ru.spring.hell.client
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod.POST
-import ru.spring.hell.configuration.ItemFeignClientConfiguration
+import ru.spring.hell.configuration.feign.ItemFeignClientConfiguration
 import ru.spring.hell.model.soap.Items
 
 

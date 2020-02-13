@@ -1,4 +1,4 @@
-package ru.spring.hell.configuration
+package ru.spring.hell.configuration.feign
 
 import feign.RequestInterceptor
 import feign.codec.Decoder

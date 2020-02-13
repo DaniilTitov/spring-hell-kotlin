@@ -1,4 +1,4 @@
-package ru.spring.hell.configuration
+package ru.spring.hell.configuration.rabbit
 
 
 import org.springframework.amqp.core.*

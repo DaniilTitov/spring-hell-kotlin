@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component
 @Component
 class RabbitMqTask(private val template: RabbitTemplate) {
 
-    @Scheduled(fixedRate = 5000)
-    fun sendMessage() {
-        template.setExchange("person-exchange")
-        template.convertSendAndReceive("Daniil")
-    }
+//    @Scheduled(fixedRate = 5000)
+//    fun sendMessage() {
+//        template.setExchange("person-exchange")
+//        template.convertSendAndReceive("Daniil")
+//    }
 
 }
